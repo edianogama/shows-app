@@ -4,7 +4,7 @@ import { StyleSheet, TextInput, Text } from 'react-native';
 
 const Input = (props) => {
     const [stateValor, setStateValor] = useState(props.initialValue);
-    const onChage = (text) => { 
+    const onChange = (text) => { 
         setStateValor(text);
         props.onChage(text);
     }
@@ -13,7 +13,7 @@ const Input = (props) => {
     <>
         <Text>{props.label}</Text>
         <TextInput value={stateValor} style={styles.textInputStyle} 
-        onChageText={onChage} />
+        onChangeText={onChange} />
     </>
     )
 }
