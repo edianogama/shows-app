@@ -1,14 +1,35 @@
 import React  from "react";
-import { Text } from 'react-native';
+import { View,StyleSheet } from 'react-native';
 
 const ShowsScreen = () => {
     return (
         <>
-            <Text></Text>
-            <Text></Text>
-            <Text>Essa é a tela de Shows</Text>
+           <View style={styles.parentStyle}>
+               <View style={styles.listStyle}>
+
+               </View>
+               <View style={styles.detailStyle}>
+
+               </View>
+           </View>
         </>
     );
 
 }
+const styles = StyleSheet.create({
+    parentStyle: {
+        backgroundColor:"red",
+        flex:1,
+        marginTop: 40
+    },
+    listStyle: {
+        backgroundColor: "blue",
+        flex: 2
+    },
+    detailStyle: {
+        backgroundColor: "green",
+        flex:1
+    },
+})
+
 export default ShowsScreen;
