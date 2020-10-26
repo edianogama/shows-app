@@ -12,7 +12,6 @@ const GenericInput = (props) => {
     }
     return (
         <>
-      
           <TextInput value={stateValor}  style={props.style}
                 onChangeText={onChange} />
         </>

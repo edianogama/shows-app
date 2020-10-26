@@ -3,6 +3,7 @@ import { StyleSheet} from 'react-native';
 import { NavigationContainer} from '@react-navigation/native'
 import  { createStackNavigator } from '@react-navigation/stack'
 import HomeScreen from './src/screens/Home'
+import TelaScreen from './src/screens/Tela';
 
 const Stack = createStackNavigator();
 
@@ -11,6 +12,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator>
             <Stack.Screen name="Séries inc" component={HomeScreen} />
+            <Stack.Screen name="Tela" component={TelaScreen} />
         </Stack.Navigator>
       </NavigationContainer>
   );

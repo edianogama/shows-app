@@ -1,28 +1,18 @@
 import React, { useState } from "react";
-import  { StyleSheet, View, Text, TextInput, Button } from "react-native";
+import  { StyleSheet, View, Text, TextInput } from "react-native";
 
-import Input from '../components/form/Input';
-import SearchInput from "../components/form/SearchInput";
-
-
-const HomeScreen = (props) => {
-    const [stateValorInput, setStateValorInput] = useState("");
-    const [stateData, setStateData] = useState("26-10-2020");
-    const [stateNome, setStateNome] = useState("");
-    const {navigation} = props;
+const TelaScreen = () => {
 
     return (
         <>
-        <View>
-            <SearchInput label="Buscar" onChange={(text)=>setStateNome(text)}  initialValue={""} ></SearchInput>
-            <Input label="Nome" onChange={(text)=>setStateNome(text)}  initialValue={"Nome"} ></Input>
-            <Button title={"Nova Página"} onPress={()=>navigation.navigate("Tela")}></Button>
+        <View style={styles.containerStyle}>
+            <Text style={styles.textInputStyle}>Tela de Navegacacao 2</Text>
         </View>
         </>
         
     )
 }
-export default HomeScreen;
+export default TelaScreen;
 
 const styles = StyleSheet.create({
     textInputStyle: {
