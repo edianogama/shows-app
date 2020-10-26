@@ -1,22 +1,15 @@
 import React, { useState } from "react";
 import  { StyleSheet, View, Text, TextInput } from "react-native";
-import DatePicker from 'react-native-datepicker';
-
-import Input from '../components/form/Input';
-import SearchInput from "../components/form/SearchInput";
-
 
 const HomeScreen = () => {
-    const [stateValorInput, setStateValorInput] = useState("");
-    const [stateData, setStateData] = useState("26-10-2020");
-    const [stateNome, setStateNome] = useState("");
 
 
     return (
         <>
         <View>
-            <SearchInput label="Buscar" onChange={(text)=>setStateNome(text)}  initialValue={""} ></SearchInput>
-            <Input label="Nome" onChange={(text)=>setStateNome(text)}  initialValue={"Nome"} ></Input>
+            <Text></Text>
+            <Text></Text>
+            <Text>Essa é a tela de Home</Text>
         </View>
         </>
         

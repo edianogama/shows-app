@@ -1,18 +1,22 @@
 import React from 'react';
 import { StyleSheet} from 'react-native';
-import { NavigationContainer} from '@react-navigation/native'
-import  { createStackNavigator } from '@react-navigation/stack'
+import  { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './src/screens/Home'
+import ShowsScreen from './src/screens/Shows'
+import NewShowScreen from './src/screens/NewShow'
 
-const Stack = createStackNavigator();
+const TabNav = createBottomTabNavigator();
 
 export default function App() {
   return (
-      <NavigationContainer>
-        <Stack.Navigator>
-            <Stack.Screen name="Séries inc" component={HomeScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
+     <NavigationContainer>
+         <TabNav.Navigator>
+            <TabNav.Screen name={"Home"} component={HomeScreen}/>
+            <TabNav.Screen name={"Shows"} component={ShowsScreen}/>
+            <TabNav.Screen name={"NewShow"} component={NewShowScreen} />
+         </TabNav.Navigator>
+     </NavigationContainer>
   );
 }
 

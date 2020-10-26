@@ -6,8 +6,12 @@ $ npx expo-cli init shows-app
 ``code
 expo install react-native-gesture-handler reactive-native-reanimated react-native-screens react-nativee-safe-area-context @react-native-community/masked-view
 ``
-## Navigation Component
+## Navigation Component - Stack
 ``code
 $ yarn add @react-navigation/native 
 $ yarn add @react-navigation/stack
+``
+## Navigation Component - bottom-tabs
+``code
+$ yarn add @react-navigation/bottom-tabs
 ``
