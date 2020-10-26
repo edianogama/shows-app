@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import  { StyleSheet, View, Text, TextInput } from "react-native";
 import DatePicker from 'react-native-datepicker';
 
-import Input from '../components/form/input';
+import Input from '../components/form/Input';
+import SearchInput from "../components/form/SearchInput";
 
 
 const HomeScreen = () => {
@@ -14,7 +15,8 @@ const HomeScreen = () => {
     return (
         <>
         <View>
-            <Input label="Nome" onChange={(text)=>setStateNome(text)}  initialValue={"como assim brother?"} ></Input>
+            <SearchInput label="Buscar" onChange={(text)=>setStateNome(text)}  initialValue={""} ></SearchInput>
+            <Input label="Nome" onChange={(text)=>setStateNome(text)}  initialValue={"Nome"} ></Input>
         </View>
         </>
         
@@ -51,8 +53,9 @@ const styles = StyleSheet.create({
     },
     viewStyle:{
         flex: 1,
-        alignItems: "center",
-        justifyContent: "center"
+        alignItems: "stretch",
+        justifyContent: "flex-start",
+        marginTop:10
     },
     titleStyle: {
         fontSize:20,

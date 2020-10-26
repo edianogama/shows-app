@@ -1,18 +1,18 @@
 import React,{useState} from 'react';
 import { StyleSheet, TextInput, Text } from 'react-native';
+import GenericInput from './GenericInput';
 
 
 const Input = (props) => {
-    const [stateValor, setStateValor] = useState(props.initialValue);
     const onChange = (text) => { 
-        setStateValor(text);
-        props.onChage(text);
+        if(props.onChange)
+            props.onChange(text);
     }
 
     return (
     <>
-        <Text>{props.label}</Text>
-        <TextInput value={stateValor} style={styles.textInputStyle} 
+        <Text style={styles.textLabelStyle}>{props.label}</Text>
+        <GenericInput initialValue={props.initialValue} style={styles.textInputStyle} 
         onChangeText={onChange} />
     </>
     )
@@ -21,6 +21,10 @@ const Input = (props) => {
 export default Input;
 
 const styles = StyleSheet.create({
+    textLabelStyle: {
+        marginLeft: 10,
+        marginTop: 20
+    },
     textInputStyle: {
         backgroundColor: "#ddd",
         marginTop:20,
