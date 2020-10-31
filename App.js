@@ -43,17 +43,17 @@ const TabBar = ({navigation, state}) => {
 }
 export default function App() {
     const [state, dispatch] = useReducer(appReducer, initialState);
-  return (
-      <AppContext.Provider value={{ state, dispatch }}>
-        <NavigationContainer>
-            <TabNav.Navigator tabBar={ props => <TabBar {...props} />}>
-                <TabNav.Screen name={"Home"} component={HomeScreen}/>
-                <TabNav.Screen name={"Shows"} component={ShowsScreen}/>
-                <TabNav.Screen name={"NewShow"} component={NewShowScreen} />
-            </TabNav.Navigator>
-        </NavigationContainer>
-     </AppContext.Provider>
-  );
+    return (
+        <AppContext.Provider value={{ state, dispatch }}>
+            <NavigationContainer>
+                <TabNav.Navigator tabBar={ props => <TabBar {...props} />}>
+                    <TabNav.Screen name={"Home"} component={HomeScreen}/>
+                    <TabNav.Screen name={"Shows"} component={ShowsScreen}/>
+                    <TabNav.Screen name={"NewShow"} component={NewShowScreen} />
+                </TabNav.Navigator>
+            </NavigationContainer>
+        </AppContext.Provider>
+    );
 }
 
 const styles = StyleSheet.create({

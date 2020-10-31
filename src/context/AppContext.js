@@ -16,6 +16,8 @@ export const appReducer = (state, action) => {
         case "createList":
             return {showList: action.payload};
             break;
+        case "setItemSelected":
+            return {...state, itemSelected: action.payload }
         default:
             return state;
             break;
@@ -23,5 +25,6 @@ export const appReducer = (state, action) => {
 }
 
 export const initialState  = {
-    showList: new Array()
+    showList: new Array(),
+    itemSelected: null
 }

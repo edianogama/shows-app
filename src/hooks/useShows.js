@@ -1,9 +1,14 @@
 import show from '../api/show';
-import  {useState, useEffect} from 'react';
+import  {useState, useEffect, useContext} from 'react';
+import { AppContext } from '../context/AppContext';
 
 export const useShows = () => { 
-    const [stateShows, setStateShows] = useState(null);
-     /**
+    /** estado local */
+    // const [stateShows, setStateShows] = useState(null);
+    /** estado global */
+    const {state, dispatch} = useContext(AppContext);
+
+    /**
      * useEffect substitui os antigos lifecicle. 
      * Ele funciona toda vez quando precisar executar o segundo passo. O side Effect. Ele é passado como parametros []
      * Ex: quando um item se modificar, ele executa o useEffect. Se não passar nada, ele executa só quando criar o componente. Uma vez
@@ -11,9 +16,9 @@ export const useShows = () => {
     useEffect(() => {
         show.get('/shows')
         .then(response => {
-            setStateShows(response.data);
+            const action = { type : "createList", payload: response.data };
+            dispatch(action);
         });
     },[]);
-    return {shows: stateShows};
-
+    return {shows: state.showList}
 }
