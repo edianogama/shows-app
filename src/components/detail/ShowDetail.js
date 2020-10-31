@@ -5,8 +5,7 @@ import { AppContext } from '../../context/AppContext';
 
 const ShowDetail = () => {
     const  {state}  = useContext(AppContext);
-    const {name, country,image_thumbnail_path, network} = state.showList.filter( item=> item.id === state.itemSelected)[0] ;
-    // const {name, country, network} = state.showList.filter(item=>item.id===state.itemSelected)[0];
+    const {name, country,image_thumbnail_path, network} = state.showList.find( item=> item.id === state.itemSelected);
     console.log(image_thumbnail_path);
     return (
         <>
@@ -27,19 +26,19 @@ const ShowDetail = () => {
 }
 const styles = StyleSheet.create({
     viewStyle: {
-        flex:1,
         paddingTop: 20,
-        paddingLeft: 50,
-        paddingRight: 50,
+
+        paddingLeft: 10,
+        paddingRight: 20,
         flexDirection: "row",
-        justifyContent:"space-evenly",
+        justifyContent:"space-between",
     },
     boxContainStyle: {
         backgroundColor: "#f6f6f6",
+        minWidth:200,
     },
     pictureStyle : {
-        flex: 1,
-        width: 300,
+        width: 200,
         height: 200
     }
 });

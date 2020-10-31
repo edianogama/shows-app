@@ -21,14 +21,14 @@ const ShowsScreen = () => {
 const styles = StyleSheet.create({
     parentStyle: {
         flex:1,
-        marginTop: 40
+        marginTop: 40,
     },
     listStyle: {
         flex: 2
     },
     detailStyle: {
-        backgroundColor: "#f4f4f4",
-        flex:1
+        backgroundColor: "#ccc",
+        flex: 1
     },
 })
 
