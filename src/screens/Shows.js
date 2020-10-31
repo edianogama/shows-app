@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         flex: 2
     },
     detailStyle: {
-        backgroundColor: "green",
+        backgroundColor: "#fff",
         flex:1
     },
 })
