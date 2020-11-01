@@ -5,8 +5,9 @@ import { AppContext } from '../../context/AppContext';
 
 const ShowDetail = () => {
     const  {state}  = useContext(AppContext);
-    const {name, country,image_thumbnail_path, network} = state.showList.find( item=> item.id === state.itemSelected);
-    console.log(image_thumbnail_path);
+    const {name, country,image_thumbnail_path, network} =(state. itemSelected) ? state.showList.find( item=> item.id === state.itemSelected) : {
+        name:"", country: "", image_thumbnail_path: "", network: ""
+    };
     return (
         <>
           <View style={ styles.viewStyle }>

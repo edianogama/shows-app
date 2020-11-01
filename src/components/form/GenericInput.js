@@ -3,7 +3,7 @@ import { TextInput } from 'react-native';
 
 
 const GenericInput = (props) => {
-    const [stateValor, setStateValor] = useState(props.initValue);
+    const [stateValor, setStateValor] = useState(props.initialValue);
 
     const onChange = (text)  => {
         setStateValor(text);

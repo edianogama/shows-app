@@ -1,4 +1,5 @@
 import { createContext } from "react";
+import show from "../api/show";
 
 /**
  * Contexto geral da minha aplicação
@@ -18,6 +19,11 @@ export const appReducer = (state, action) => {
             break;
         case "setItemSelected":
             return {...state, itemSelected: action.payload }
+        case "addItem":
+            const showList = state.showList;
+            showList.push(action.payload);
+            return {...state, showList};
+            
         default:
             return state;
             break;

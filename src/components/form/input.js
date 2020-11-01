@@ -13,7 +13,7 @@ const Input = (props) => {
     <>
         <Text style={styles.textLabelStyle}>{props.label}</Text>
         <GenericInput initialValue={props.initialValue} style={styles.textInputStyle} 
-        onChangeText={onChange} />
+        onChange={onChange} />
     </>
     )
 }
